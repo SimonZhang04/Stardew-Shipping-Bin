@@ -1,0 +1,19 @@
+.itemsMenuContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+}   
+
+.subtotal {
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+}
+
+.qualityIcon {
+    width: 1.2em;
+    height: auto;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em;
+}

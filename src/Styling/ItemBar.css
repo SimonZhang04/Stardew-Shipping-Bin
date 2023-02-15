@@ -1,0 +1,56 @@
+.itemBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 0.1fr;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin: 6em;
+    margin-bottom: 0;
+    margin-top: 2em;
+    align-items: center;
+    justify-items: center;
+}
+
+.productImg {
+    width: 5em;
+    height: auto;
+    object-fit: scale-down;
+    grid-row: 1 / span 2;
+ }
+
+.subtotal {
+    margin-top: 0;
+    grid-column-start: 6;
+}
+
+.deleteItem {
+    background-color: rgb(219, 219, 219);
+    border-radius: 3px;
+}
+
+.deleteItem:hover {
+    background-color: rgb(170, 190, 255);
+  }
+
+.productDesc {
+    grid-row: 1/span 2;
+    justify-self: start;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 1em;
+}
+
+.baseValue {
+    margin-top: 1em;
+}
+
+.deleteButton {
+    padding: 0;
+    border: 0;
+    grid-column-start: 7;
+    grid-row: 1/span 2;
+    cursor: pointer; 
+}
