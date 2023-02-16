@@ -28,3 +28,15 @@ html {
   bottom: 0;
   right: 0;
 }
+
+@media screen and (max-width: 770px) {
+  .shippingBin {
+    height: 80px;
+    width: auto;
+    margin-left: 1em;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+  }
+}

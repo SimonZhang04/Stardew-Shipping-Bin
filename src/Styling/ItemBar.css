@@ -11,6 +11,31 @@
     justify-items: center;
 }
 
+@media screen and (max-width: 770px) {
+    .itemBar {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1em;
+    }
+
+    .productDesc {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .regular {
+        margin-left: 3em;
+    }
+    button {
+        margin-top: 1em;
+    }
+    .itemName {
+        margin: 0;
+        font-size: 1.3em;
+    }
+
+}
+
 .productImg {
     width: 5em;
     height: auto;

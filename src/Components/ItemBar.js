@@ -63,13 +63,13 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
     }, [total])
   
     return (
-      <div className="itemBar ">
+      <Box className="itemBar ">
           <img className="productImg" src={item.imageLink} alt="product icon"/>
           <div className="productDesc">
             <h2 className="itemName">{item.product}</h2>
             <p className="baseValue">{item.sellPrice}G</p>
           </div>
-          <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+          <Box className="regular" sx={{ display: 'flex', alignItems: 'flex-end' }}>
             <TextField 
             id="standard-basic" 
             label="Regular" 
@@ -120,6 +120,6 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
             <CloseIcon className="deleteItem" />
           </button>
           <p className="subtotal"> Subtotal: {total} </p>
-      </div>
+      </Box>
     )
   }
