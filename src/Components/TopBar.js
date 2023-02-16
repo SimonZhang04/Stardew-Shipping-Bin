@@ -40,7 +40,7 @@ export default function TopBar({total}) {
             variant="h6"
             noWrap
             component="a"
-            href="https://github.com/SimonZhang04/Shipping-Bin"
+            href="https://github.com/SimonZhang04/Stardew-Shipping-Bin"
             target="_blank"
             sx={{
               mr: 2,
@@ -89,7 +89,7 @@ export default function TopBar({total}) {
             variant="h5"
             noWrap
             component="a"
-            href="https://github.com/SimonZhang04/Shipping-Bin"
+            href="https://github.com/SimonZhang04/Stardew-Shipping-Bin"
             target="_blank"
             sx={{
               mr: 2,
