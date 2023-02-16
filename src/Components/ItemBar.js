@@ -69,8 +69,9 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
             <h2 className="itemName">{item.product}</h2>
             <p className="baseValue">{item.sellPrice}G</p>
           </div>
-          <Box className="regular" sx={{ display: 'flex', alignItems: 'flex-end' }}>
-            <TextField 
+          <Box id="regular" sx={{ display: 'flex', alignItems: 'flex-end' }}>
+            <TextField
+            className='numInput'
             id="standard-basic" 
             label="Regular" 
             variant="standard" 
@@ -83,6 +84,7 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
           <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
             <img className="qualityIcon" src={silver} alt="silver" />
             <TextField 
+            className='numInput'
             id="standard-basic" 
             label="Silver" 
             variant="standard" 
@@ -95,6 +97,7 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
           <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
             <img className="qualityIcon" src={gold} alt="gold" />
             <TextField 
+            className='numInput'
             id="standard-basic" 
             label="Gold" 
             variant="standard" 
@@ -107,6 +110,7 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
           <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
             <img className="qualityIcon" src={iridium} alt="iridium" />
             <TextField 
+            className='numInput'
             id="standard-basic" 
             label="Iridium" 
             variant="standard" 

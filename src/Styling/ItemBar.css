@@ -16,6 +16,7 @@
         display: flex;
         flex-direction: column;
         padding-top: 1em;
+        margin: 2em;
     }
 
     .productDesc {
@@ -23,15 +24,18 @@
         flex-direction: column;
         align-items: center
     }
-    .regular {
+    #regular {
         margin-left: 3em;
     }
-    button {
+    .deleteButton {
         margin-top: 1em;
     }
     .itemName {
         margin: 0;
         font-size: 1.3em;
+    }
+    .numInput {
+        width: 10em;
     }
 
 }
