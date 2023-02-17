@@ -13,7 +13,7 @@ import Divider from '@mui/material/Divider';
 export default function App() {
   const [myList, setMyList] = useState([]);
   const [list, setList] = useState([]);
-  const [total , setTotal] = useState(0);
+  const [total, setTotal] = useState(0);
 
   function addMyList(item) {
     const my_item = {
@@ -31,13 +31,13 @@ export default function App() {
     };
     return my_item;
   }
-  
-  function addItem(product) { 
+
+  function addItem(product) {
     if (!list.includes(product)) {
       const updatedList = [...list.slice(), product];
       const updatedMyList = [...myList.slice(), addMyList(product)];
       setList(updatedList);
-      setMyList(updatedMyList); 
+      setMyList(updatedMyList);
     } else {
       alert('Item already added!');
     }
@@ -49,11 +49,11 @@ export default function App() {
     setMyList([...items]);
   }
 
-  function deleteItem(index) {
+  function deleteItem(productName) {
     let myItems = [...myList];
     let items = [...list];
-    items.splice(index, 1); 
-    myItems.splice(index, 1);
+    myItems.splice(myItems.findIndex(e => e.product === productName), 1);
+    items.splice(items.findIndex(e => e.product === productName), 1);
     setMyList([...myItems]);
     setList([...items]);
   }
@@ -69,26 +69,26 @@ export default function App() {
       total += myList[i].subtotal;
     }
     setTotal(total);
- }, [myList])
+  }, [myList])
 
   return (
     <div className="App">
-      <TopBar total={total}/>
+      <TopBar total={total} />
       <div className="title">
         <img className="shippingBin" src={shippingBin} alt="bin" />
         <h1 className="titleText">Stardew Shipping Bin</h1>
       </div>
-      <SearchBar placeholder="Add a product..." data={ProductData} addItem={addItem} addedData={list}/>
+      <SearchBar placeholder="Add a product..." data={ProductData} addItem={addItem} addedData={list} />
       <Divider variant="middle" />
-      <ItemMenu itemsList={myList} updateSubtotal={updateSubtotal} deleteItem={deleteItem}/>
-      <div className="bottomFunctions"> 
-        <Button onClick={deleteAll} sx={{marginBottom:'0.5em'}}>
+      <ItemMenu itemsList={myList} updateSubtotal={updateSubtotal} deleteItem={deleteItem} />
+      <div className="bottomFunctions">
+        <Button onClick={deleteAll} sx={{ marginBottom: '0.5em' }}>
           Delete All
         </Button>
         <a className="upButton" href="#">
-          <ArrowUpwardIcon/>
+          <ArrowUpwardIcon />
         </a>
       </div>
     </div>
-    );
+  );
 }

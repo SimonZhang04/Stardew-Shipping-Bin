@@ -60,6 +60,7 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
   
     useEffect(() => {
       updateSubtotal(total, index);
+      console.log("Yes");
     }, [total])
   
     return (
