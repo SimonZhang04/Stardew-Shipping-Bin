@@ -52,8 +52,8 @@ export default function App() {
   function deleteItem(productName) {
     let myItems = [...myList];
     let items = [...list];
-    myItems.splice(myItems.findIndex(e => e.product === productName), 1);
-    items.splice(items.findIndex(e => e.product === productName), 1);
+    myItems.splice(myItems.findIndex(e => e.product === productName),1);
+    items.splice(items.findIndex(e => e.product === productName),1);
     setMyList([...myItems]);
     setList([...items]);
   }

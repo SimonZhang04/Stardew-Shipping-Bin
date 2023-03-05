@@ -51,7 +51,7 @@ export default function ItemBar({item, index, updateSubtotal, deleteItem}) {
     }
 
     function handleDelete() {
-      deleteItem(index);
+      deleteItem(item.product);
     }
   
     useEffect(() => {
